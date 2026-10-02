@@ -121,7 +121,8 @@ This is a teaching POS, with fictional records and no payment processor. A
 website order is a pending request, not proof of payment or shipping. Staff
 authentication is a local demonstration; review deployment, HTTPS, session
 settings, permissions, backups and access logging before using real customer
-data. Customer contact details appear only on staff routes. All write forms use
+data. Order contact details appear on protected staff routes and at the order
+confirmation URL containing a random token. All write forms use
 CodeIgniter CSRF protection, passwords are hashed, and session IDs rotate on
 sign-in. The visual browser review still needs to be completed on the user's
 machine because automated browser access was denied during preparation.
