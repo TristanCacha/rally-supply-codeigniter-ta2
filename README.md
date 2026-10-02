@@ -6,29 +6,6 @@ through Models. The shop also reads database products and stock for every option
 Shoppers can place an order without signing in. Staff can sign in to manage
 pending orders, update inventory, record in-person sales, and inspect receipts.
 
-## Start on this Windows machine
-
-1. Open the `pickleball-pos-ta2` folder in VS Code, or extract the complete ZIP.
-2. Double-click `Start-TA2.cmd`. Leave that terminal open.
-3. Visit `http://localhost:8082/`. Use Shop, Cart and Checkout to place a
-   pending order with your name and email; no staff sign-in is needed.
-4. For staff pages, open `.local/staff-login.txt` in this project folder. Its
-   randomly generated username and password are created on first launch.
-5. Sign in from the website. Visit Customers, Users, Inventory, Orders and Sales.
-6. To stop, press Ctrl+C in the launcher terminal. Run `Stop-Database.cmd` to
-   stop the local database. Its records remain saved for the next launch.
-
-The launcher uses the installed PHP and `C:\xampp\mysql` programs on this
-machine. It enables the installed MySQLi extension for its own process, starts a
-separate MariaDB instance on `127.0.0.1:3307`, and serves the site on port 8082.
-MariaDB is MySQL-compatible. The launcher creates `.env` only if absent and
-checks an existing `.env` before starting the website. An occupied database
-port is checked against this project's data directory before anything is
-imported. Use one copy on those ports at a time.
-
-The ZIP includes Composer dependencies. A future Git clone will need
-`composer install` with PHP 8.2+, intl, mbstring and mysqli.
-
 ## What to try
 
 1. Browse the nine products. Category links filter the database catalog.
